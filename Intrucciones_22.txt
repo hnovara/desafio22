@@ -1,0 +1,38 @@
+Se necesita crear una aplicación simple que permita a los usuarios ingresar su nombre y edad y mostrar un mensaje personalizado de bienvenida. El mensaje de bienvenida se personalizará con el nombre del usuario y un mensaje de acuerdo a su edad.
+
+Lógica de negocio:
+
+La aplicación debe recibir los datos de entrada (nombre y edad) del usuario, almacenarlos en el estado de la aplicación usando el Hook useState, y luego generar un mensaje de bienvenida personalizado en base a la edad del usuario. Si el usuario es menor de edad (menos de 18 años), el mensaje debe decir "Hola [nombre], eres muy joven para usar esta aplicación". Si el usuario es mayor de edad (18 años o más), el mensaje debe decir "Bienvenido [nombre], gracias por usar nuestra aplicación".
+
+Datos de entrada:
+
+* Nombre: string
+* Edad: number
+
+Datos de salida:
+
+* Mensaje de bienvenida personalizado: string
+
+Requerimientos funcionales:
+
+* La aplicación debe permitir al usuario ingresar su nombre y edad.
+* La aplicación debe generar un mensaje de bienvenida personalizado en base a la edad del usuario.
+* La aplicación debe mostrar el mensaje de bienvenida en la pantalla.
+
+Requerimientos no funcionales:
+
+* La aplicación debe ser desarrollada en React.
+* La aplicación debe usar el Hook useState para gestionar el estado.
+* La aplicación debe ser fácil de usar y comprensible para el usuario final.
+
+Pasos a realizar:
+
+1.Crear un nuevo proyecto de React utilizando create-react-app.
+2.En el archivo App.js, importar el Hook useState de React.
+3.Crear dos estados: uno para el nombre del usuario y otro para su edad, usando useState.
+4.Crear una función que tome los valores del nombre y la edad del estado y genere el mensaje de bienvenida personalizado.
+5.Crear un formulario que permita al usuario ingresar su nombre y edad.
+6.Agregar un evento de onSubmit al formulario para capturar los valores del nombre y la edad ingresados por el usuario.
+7.Agregar un componente que muestre el mensaje de bienvenida personalizado en la pantalla.
+8.Pasar el mensaje de bienvenida personalizado como una propiedad al componente que lo muestra en la pantalla.
+9.Probar la aplicación para asegurarse de que funcione correctamente.
