@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import './App.css'; // Archivo CSS para los estilos
+import './App.css'; 
 
 function App() {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [welcomeMessage, setWelcomeMessage] = useState('');
-  const [showAlert, setShowAlert] = useState(false);
 
   const generateWelcomeMessage = () => {
     if (age < 18) {
@@ -20,41 +19,39 @@ function App() {
     if (name && age) {
       const message = generateWelcomeMessage();
       setWelcomeMessage(message);
-      setShowAlert(false);
+      alert(message); 
     } else {
-      setShowAlert(true);
+      alert('Por favor completa todos los campos'); 
     }
-  };
-
-  const WelcomeMessage = ({ message }) => {
-    return <h2>{message}</h2>;
   };
 
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
         <label>
-          Nombre:
+          Nombre
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="input-field"
           />
         </label>
         <br />
         <label>
-          Edad:
+          Edad
           <input
             type="number"
             value={age}
             onChange={(e) => setAge(e.target.value)}
+            className="input-field"
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" className="button">
+          Ingresar
+        </button>
       </form>
-      {showAlert && <p className="alert">Por favor completa todos los campos</p>}
-      {welcomeMessage && <WelcomeMessage message={welcomeMessage} />}
     </div>
   );
 }
